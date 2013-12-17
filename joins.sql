@@ -13,7 +13,6 @@ ON pledges.user_id = users.id
 GROUP BY pledges.amount;
 
 -- Select the titles of all projects that have met their funding goal.
--- DOESN'T WORK YET
 SELECT projects.title, projects.funding_goal, SUM(pledges.amount) AS money_raised
 FROM pledges
 JOIN projects
